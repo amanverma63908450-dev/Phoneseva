@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PhoneSeva - Doorstep Mobile Repair</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f6f8;
+}
+
+header{
+background:#0a84ff;
+color:white;
+text-align:center;
+padding:40px;
+}
+
+.logo{
+font-size:34px;
+font-weight:bold;
+}
+
+.tag{
+font-size:18px;
+margin-top:10px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 20px;
+margin:10px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:6px;
+}
+
+.callbtn{
+background:#ff7a00;
+}
+
+.section{
+padding:40px 20px;
+text-align:center;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:20px;
+max-width:900px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+form{
+max-width:500px;
+margin:auto;
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+padding:14px;
+background:#0a84ff;
+color:white;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">📱 PhoneSeva</div>
+<p class="tag">Doorstep Mobile Repair Service</p>
+
+<a class="btn callbtn" href="tel:+918707785028">Call Now</a>
+<a class="btn" href="https://wa.me/916390845032">WhatsApp</a>
+
+</header>
+
+<section class="section">
+
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="card">Display Replacement</div>
+<div class="card">Battery Replacement</div>
+<div class="card">Charging Pin Repair</div>
+<div class="card">Speaker / Mic Repair</div>
+<div class="card">Volume Button Repair</div>
+<div class="card">Software Flashing</div>
+<div class="card">Touch Glass Change</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Book Repair</h2>
+
+<form onsubmit="sendToWhatsApp(); return false;">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="text" id="model" placeholder="Phone Model" required>
+
+<input type="text" id="problem" placeholder="Problem" required>
+
+<input type="text" id="address" placeholder="Address" required>
+
+<textarea id="details" placeholder="More Details"></textarea>
+
+<button type="submit">Submit Request</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>PhoneSeva © 2026</p>
+<p>Call: 8707785028</p>
+
+</footer>
+
+<script>
+
+function sendToWhatsApp(){
+
+var name=document.getElementById("name").value;
+var model=document.getElementById("model").value;
+var problem=document.getElementById("problem").value;
+var address=document.getElementById("address").value;
+var details=document.getElementById("details").value;
+
+var message="New Repair Request:%0A%0A"
++"Name: "+name+"%0A"
++"Phone Model: "+model+"%0A"
++"Problem: "+problem+"%0A"
++"Address: "+address+"%0A"
++"Details: "+details;
+
+var url="https://wa.me/916390845032?text="+message;
+
+window.open(url,'_blank');
+
+}
+
+</script>
+
+</body>
+</html>
